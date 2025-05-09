@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  flask:
+    build:
+      context: ./app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: securepassword
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
