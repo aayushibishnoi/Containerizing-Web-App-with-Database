@@ -1,7 +1,7 @@
 # Containerizing-Web-App-with-Database : 
 A project to deploy a Flask web app with a MySQL database using Docker containers.
 
-#Project Structure :
+# Project Structure :
 
     flask-mysql-docker/
     ├── app/
